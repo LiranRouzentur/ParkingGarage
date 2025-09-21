@@ -1,0 +1,44 @@
+@ParkingGarage.Api_HostAddress = http://localhost:5034
+
+### Get Garage State
+GET {{ParkingGarage.Api_HostAddress}}/api/parking/garage-state
+Accept: application/json
+
+### Get Garage State with Filters
+GET {{ParkingGarage.Api_HostAddress}}/api/parking/garage-state?ticketType=1&status=1
+Accept: application/json
+
+### Generate Fake Data
+GET {{ParkingGarage.Api_HostAddress}}/api/parking/generate-fake-data
+Accept: application/json
+
+### Check In Vehicle
+POST {{ParkingGarage.Api_HostAddress}}/api/parking/checkin
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "licensePlate": "ABC123",
+  "phone": "555-0123",
+  "ticketType": 1,
+  "vehicleType": 2,
+  "height": 1.5,
+  "width": 2.0,
+  "length": 4.0
+}
+
+### Check Out Vehicle
+POST {{ParkingGarage.Api_HostAddress}}/api/parking/checkout
+Content-Type: application/json
+
+{
+  "licensePlate": "ABC123"
+}
+
+### Async Check In (Random Vehicles)
+POST {{ParkingGarage.Api_HostAddress}}/api/parking/async-checkin
+Content-Type: application/json
+
+{
+  "vehicleCount": 3
+}

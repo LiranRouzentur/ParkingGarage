@@ -1,0 +1,15 @@
+global using Xunit;
+global using FluentAssertions;
+global using Moq;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.AspNetCore.Mvc.Testing;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using ParkingGarage.Api;
+global using ParkingGarage.Api.Data;
+global using ParkingGarage.Api.Entities;
+global using ParkingGarage.Api.Enums;
+global using ParkingGarage.Api.Interfaces;
+global using ParkingGarage.Api.Models;
+global using ParkingGarage.Api.Services;
+global using ParkingGarage.Api.ValueObjects;
